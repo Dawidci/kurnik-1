@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D305DA29-140E-ADD1-1BD4-8FF312C707DD" containerWithKeyObject="3579532C-0700-A657-29F9-FC393B12D50E" localFKIndex="39B49AF1-611E-FA57-2938-11842356E91B" name="Wyniki_uzytkownika_Gry_FK">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>175CB4F3-77C1-9E8D-CD09-436E54CB802C</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<referredTableLongName>Gry</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>5FE1C80E-CA74-0B25-A91E-E24FC14110A5</referredTableID>
+<keyObject>B794E88F-4A8D-891B-2816-9BDB844BF118</keyObject>
+<referredKeyID>B794E88F-4A8D-891B-2816-9BDB844BF118</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_GRY</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

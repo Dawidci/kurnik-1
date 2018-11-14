@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="22FCE2C0-BDEE-A566-263B-92EC5F825211" name="Uzytkownicy">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>AC273E42-E589-20B9-C9A9-1E99F82CF45E</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Uzytkownika" id="E7EC23DB-2DB8-1E2A-D39D-FF25BF6536A6">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>263F2844-13F6-BB12-7528-69871536B912</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Username" id="D8BF525E-6377-9CA6-7768-CDEF4653E87E">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>1B07E8C6-C9CB-0978-2E83-3FEB794A375A</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Haslo" id="C1F25919-A353-4F62-224E-E1F5794AA236">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>AFC2DBA7-FB65-0C90-15C6-C61FDB3779A7</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Data_rejestracji" id="A9F4AB1A-2D2B-7F9B-D39F-394899A0AD04">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>5234A559-5C98-EB61-F815-EC5B55755E6F</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FC93AFBE-C82E-C81A-E02E-6FC299E4328B" name="Uzytkownicy_PK">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>BBA3261D-56B6-EDB0-19CA-9B5CE24A7398</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E7EC23DB-2DB8-1E2A-D39D-FF25BF6536A6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

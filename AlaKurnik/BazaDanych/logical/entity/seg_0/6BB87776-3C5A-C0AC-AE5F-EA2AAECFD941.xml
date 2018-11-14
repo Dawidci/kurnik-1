@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6BB87776-3C5A-C0AC-AE5F-EA2AAECFD941" name="Najlepsze_wyniki">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:44:17 UTC</createdTime>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<engineerTo>
+<item key="0E0C5E52-F705-53B0-35AB-33A4E40B13FF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Najlepszych_wyników" id="E519FB56-8942-8EC6-806E-DDE07938453A">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:46:49 UTC</createdTime>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<engineerTo>
+<item key="0E0C5E52-F705-53B0-35AB-33A4E40B13FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Wynik" id="826DFA18-28E7-D033-856F-53A6FF3C0797">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:47:02 UTC</createdTime>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<engineerTo>
+<item key="0E0C5E52-F705-53B0-35AB-33A4E40B13FF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Uzytkownika" id="01E50635-7EFA-9ECE-5663-FF52AFA5B536">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:11 UTC</createdTime>
+<generatorID>20E16144-F699-BD38-435A-8D740A5D9362</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<engineerTo>
+<item key="0E0C5E52-F705-53B0-35AB-33A4E40B13FF" value="true"/>
+</engineerTo>
+<referedAttribute>263F2844-13F6-BB12-7528-69871536B912</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_GRY" id="2F279C79-8ED4-CFA4-3A8F-44351D11B270">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:17 UTC</createdTime>
+<generatorID>AE4353C8-1AB0-AB81-2958-A89759D7C8A9</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<engineerTo>
+<item key="0E0C5E52-F705-53B0-35AB-33A4E40B13FF" value="true"/>
+</engineerTo>
+<referedAttribute>9D6F1333-92C7-7043-5750-492D853183B0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FD2D3651-C999-A011-446E-0584F0E7DF13" name="Najlepsze_wyniki PK">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:54:41 UTC</createdTime>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<engineerTo>
+<item key="0E0C5E52-F705-53B0-35AB-33A4E40B13FF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E519FB56-8942-8EC6-806E-DDE07938453A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

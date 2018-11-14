@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3579532C-0700-A657-29F9-FC393B12D50E" name="Wyniki_uzytkownika">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>01395FE8-140B-EE50-35C4-E81859AE919C</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Wyniku_uzytkownika" id="930A26D7-120F-ECA3-AFF8-070EAAEC1D08">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>DA0B62DF-9A37-8EE3-727D-F4220425C1DF</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Data_uzyskania_wyniku" id="ABFA2FDC-585E-BECB-64CB-C8A4424109BA">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>1E883D8A-029A-9521-9AA7-19605057ABD9</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Wynik" id="A4C132D6-8330-D6B6-CF4E-E0DE0B8C5619">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>A42D0474-87B8-C6C4-4531-8BCFC89B26EA</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Uzytkownicy_ID_Uzytkownika" id="CF0B37CE-B4F0-BDE3-3FC3-2C2DAB805D55">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>E511C9B1-BFDE-E0BD-55BB-B55132CCA5AB</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7AA54CA4-D5C8-9D20-4AC4-D71561A443D4" referredColumn="E7EC23DB-2DB8-1E2A-D39D-FF25BF6536A6"/>
+</associations>
+</Column>
+<Column name="Gry_ID_GRY" id="CFC06DAB-D7C8-6656-708A-C676CC56171B">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>DA4A2EBE-0279-ABD2-2A18-81598581B751</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D305DA29-140E-ADD1-1BD4-8FF312C707DD" referredColumn="D6F3146F-ADFE-B244-B999-3E0663DA9F79"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="07680013-3612-28B8-C375-FA958F1E3C59" name="Wyniki_uzytkownika_PK">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>46BC8969-7AE0-B80B-B415-C122F5BFB1C2</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="930A26D7-120F-ECA3-AFF8-070EAAEC1D08"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="01714098-93F3-C54D-21AE-3BDB5AE5B138" name="Wyniki_uzytkownika_Uzytkownicy_FK">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>4AFF9E92-8C12-3F1C-3D33-2E9B6C63DC8E</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CF0B37CE-B4F0-BDE3-3FC3-2C2DAB805D55"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="39B49AF1-611E-FA57-2938-11842356E91B" name="Wyniki_uzytkownika_Gry_FK">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>175CB4F3-77C1-9E8D-CD09-436E54CB802C</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CFC06DAB-D7C8-6656-708A-C676CC56171B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

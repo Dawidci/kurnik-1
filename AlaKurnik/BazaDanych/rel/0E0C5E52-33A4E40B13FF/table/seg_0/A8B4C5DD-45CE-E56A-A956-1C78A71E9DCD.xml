@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A8B4C5DD-45CE-E56A-A956-1C78A71E9DCD" name="Najlepsze_wyniki">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>6BB87776-3C5A-C0AC-AE5F-EA2AAECFD941</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Najlepszych_wyników" id="1050522E-4F0D-ACE6-DA06-95D4543FB052">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>E519FB56-8942-8EC6-806E-DDE07938453A</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Wynik" id="4D3AAB35-31D4-E676-9FEB-12B34F4B9621">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>826DFA18-28E7-D033-856F-53A6FF3C0797</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Uzytkownicy_ID_Uzytkownika" id="9AFC7691-445E-A73A-0E6C-29CFA5D2FC26">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>01E50635-7EFA-9ECE-5663-FF52AFA5B536</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="62B03772-F0E9-24F2-53B5-F5FC9AB3ED7D" referredColumn="E7EC23DB-2DB8-1E2A-D39D-FF25BF6536A6"/>
+</associations>
+</Column>
+<Column name="Gry_ID_GRY" id="4BFDC1C0-7625-81A1-429B-03E46C210D21">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>2F279C79-8ED4-CFA4-3A8F-44351D11B270</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3E6F7C35-C73E-9119-3375-0D648105D23A" referredColumn="D6F3146F-ADFE-B244-B999-3E0663DA9F79"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A3017AE6-87BC-5692-97ED-A69C18FAC844" name="Najlepsze_wyniki_PK">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>FD2D3651-C999-A011-446E-0584F0E7DF13</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1050522E-4F0D-ACE6-DA06-95D4543FB052"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C044C65F-69A1-EAE3-5DE2-761BD2C1A0D9" name="Najlepsze_wyniki_Uzytkownicy_FK">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>20E16144-F699-BD38-435A-8D740A5D9362</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9AFC7691-445E-A73A-0E6C-29CFA5D2FC26"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7F2E2F3D-8FE0-DE54-FA5B-4036D04F7ECD" name="Najlepsze_wyniki_Gry_FK">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:40 UTC</createdTime>
+<generatorID>AE4353C8-1AB0-AB81-2958-A89759D7C8A9</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4BFDC1C0-7625-81A1-429B-03E46C210D21"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

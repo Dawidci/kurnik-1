@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="01395FE8-140B-EE50-35C4-E81859AE919C" name="Wyniki_uzytkownika">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:44:03 UTC</createdTime>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<engineerTo>
+<item key="0E0C5E52-F705-53B0-35AB-33A4E40B13FF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Wyniku_uzytkownika" id="DA0B62DF-9A37-8EE3-727D-F4220425C1DF">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:47:50 UTC</createdTime>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<engineerTo>
+<item key="0E0C5E52-F705-53B0-35AB-33A4E40B13FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Data_uzyskania_wyniku" id="1E883D8A-029A-9521-9AA7-19605057ABD9">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:48:08 UTC</createdTime>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<engineerTo>
+<item key="0E0C5E52-F705-53B0-35AB-33A4E40B13FF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Wynik" id="A42D0474-87B8-C6C4-4531-8BCFC89B26EA">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:49:24 UTC</createdTime>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<engineerTo>
+<item key="0E0C5E52-F705-53B0-35AB-33A4E40B13FF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Uzytkownika" id="E511C9B1-BFDE-E0BD-55BB-B55132CCA5AB">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:55:59 UTC</createdTime>
+<generatorID>4AFF9E92-8C12-3F1C-3D33-2E9B6C63DC8E</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<engineerTo>
+<item key="0E0C5E52-F705-53B0-35AB-33A4E40B13FF" value="true"/>
+</engineerTo>
+<referedAttribute>263F2844-13F6-BB12-7528-69871536B912</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_GRY" id="DA4A2EBE-0279-ABD2-2A18-81598581B751">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:57:03 UTC</createdTime>
+<generatorID>175CB4F3-77C1-9E8D-CD09-436E54CB802C</generatorID>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<engineerTo>
+<item key="0E0C5E52-F705-53B0-35AB-33A4E40B13FF" value="true"/>
+</engineerTo>
+<referedAttribute>9D6F1333-92C7-7043-5750-492D853183B0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="46BC8969-7AE0-B80B-B415-C122F5BFB1C2" name="Wyniki_uzytkownika PK">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-11 09:54:32 UTC</createdTime>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<engineerTo>
+<item key="0E0C5E52-F705-53B0-35AB-33A4E40B13FF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DA0B62DF-9A37-8EE3-727D-F4220425C1DF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

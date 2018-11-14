@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="BazaDanych" id="E11643CB-5F90-269E-EE3C-753A86DAF073" version="3.5">
+<createdBy>Agnieszka</createdBy>
+<createdTime>2018-11-07 14:01:23 UTC</createdTime>
+<ownerDesignName>BazaDanych</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>E11643CB-5F90-269E-EE3C-753A86DAF073</designId>
+</OSDM_Design>
