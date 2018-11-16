@@ -8,26 +8,28 @@
     {{ title }}
   </h1>
 
-  <h2>
+  <h2 class = register>
     Rejestracja
   </h2>
 
   <label>Username:
-     <input [(ngModel)]="Meow" placeholder="Podaj username">
+     <input [(ngModel)]="RejUser" placeholder="Podaj username">
      Hasło:
-     <input [(ngModel)]="Meow" placeholder="Podaj hasło">
+     <input [(ngModel)]="RejPass" placeholder="Podaj hasło">
+     <button>Zatwierdź</button>
   </label>
 
-  <h2>
+  <h2 class = login>
     Logowanie
   </h2>
 
   <label>Username:
-      <input [(ngModel)]="Meow" placeholder="Podaj username">
+      <input [(ngModel)]="LogUser" placeholder="Podaj username">
       Hasło:
-      <input [(ngModel)]="Meow" placeholder="Podaj hasło">
+      <input [(ngModel)]="LogPass" placeholder="Podaj hasło">
+      <button>Zatwierdź</button>
    </label>
-
+   
 </div>
 
 <router-outlet></router-outlet>
