@@ -1,12 +1,33 @@
-<!--The content below is only a placeholder and can be replaced.-->
+
 <div style="text-align:center">
+
+  <img width="300"  alt="Kurnik Logo" type="image/png" 
+  src="https://github.com/Seggiana/kurnik/raw/master/src/images/chicken_512.png">
+
   <h1>
     {{ title }}
   </h1>
-  <img width="300"  alt="Kurnik Logo" type="image/png" 
-  src="https://github.com/Seggiana/PZProject/blob/master/chicken_512.png?raw=true">
-</div>
-<h2>Here are some links to help you start: </h2>
 
+  <h2>
+    Rejestracja
+  </h2>
+
+  <label>Username:
+     <input [(ngModel)]="Meow" placeholder="Podaj username">
+     Hasło:
+     <input [(ngModel)]="Meow" placeholder="Podaj hasło">
+  </label>
+
+  <h2>
+    Logowanie
+  </h2>
+
+  <label>Username:
+      <input [(ngModel)]="Meow" placeholder="Podaj username">
+      Hasło:
+      <input [(ngModel)]="Meow" placeholder="Podaj hasło">
+   </label>
+
+</div>
 
 <router-outlet></router-outlet>
