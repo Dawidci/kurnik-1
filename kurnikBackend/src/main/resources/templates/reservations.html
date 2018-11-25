@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservations</title>
+</head>
+<body>
+<h1>Reservations</h1>
+    <table>
+        <tr>
+            <th>Reservation id</th>
+            <th>User login</th>
+            <th>Board id</th>
+            <th>Data</th>
+        </tr>
+
+        <tr th:each="reservation: ${reservations}">
+            <td th:text="${reservation.reservationId}"></td>
+            <td th:text="${reservation.user.login}"></td>
+            <td th:text="${reservation.board.boardId}"></td>
+            <td th:text="${reservation.dateTime}"></td>
+        </tr>
+    </table>
+</body>
+</html>

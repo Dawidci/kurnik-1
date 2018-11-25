@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+    <h2>Users</h2>
+
+    <table>
+        <tr>
+        	<th>Username</th>
+            <th>Haslo</th>
+        </tr>
+
+        <tr th:each="user: ${users}">
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.password}"></td>
+        </tr>
+    </table>
+</body>
+</html>

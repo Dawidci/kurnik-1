@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Boards</title>
+</head>
+<body>
+<h2>Boards List</h2>
+
+<table>
+    <tr>
+        <th>board_id</th>
+        <th>board_type</th>
+    </tr>
+
+    <tr th:each="board: ${boards}">
+        <td th:text="${board.boardId}"></td>
+        <td th:text="${board.boardType}"></td>
+    </tr>
+
+</table>
+</body>
+</html>

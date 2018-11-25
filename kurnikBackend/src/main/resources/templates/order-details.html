@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Detail</title>
+</head>
+<body>
+    <h1>Order Details</h1>
+    <table>
+        <tr>
+            <th>Order detail Id</th>
+            <th>Order id</th>
+            <th>Dish Name</th>
+            <th>Dish amount</th>
+        </tr>
+        <tr th:each="orderDetail:${orderDetails}">
+            <td th:text="${orderDetail.orderDetailId}"></td>
+            <td th:text="${orderDetail.orderTable.orderId}"></td>
+            <td th:text="${orderDetail.dish.dishName}"></td>
+            <td th:text="${orderDetail.dishAmount}"></td>
+        </tr>
+    </table>
+</body>
+</html>

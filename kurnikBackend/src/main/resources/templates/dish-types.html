@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Dish Types</title>
+</head>
+<body>
+
+<h1>Dish Types</h1>
+    <table>
+        <tr>
+            <th>DishTypeId</th>
+            <th>DishTypeName</th>
+        </tr>
+
+        <tr th:each="dishType: ${dishTypes}">
+            <td th:text="${dishType.dishTypeId}"></td>
+            <td th:text="${dishType.dishTypeName}"></td>
+        </tr>
+    </table>
+</body>
+</html>

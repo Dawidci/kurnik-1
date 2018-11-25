@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Dish Detail</h1>
+<a href="/">Main menu</a>
+<a href="/dishes">Wszystkie</a>
+<a href="/dishes/1">Dania glowne</a>
+<a href="/dishes/2">Zupy</a>
+<a href="/dishes/3">Napoje</a>
+<a href="/dishes/4">Desery</a>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Price</th>
+        <th>Show details</th>
+    </tr>
+
+    <tr th:each="dish: ${dishes}">
+        <td th:text="${dish.dishId}"></td>
+        <td th:text="${dish.dishName}"></td>
+        <td th:text="${dish.dishType.dishTypeName}"></td>
+        <td th:text="${dish.dishPrice}"></td>
+        <td><a th:href="">Details</a></td>
+    </tr>
+</table>
+</body>
+</html>
