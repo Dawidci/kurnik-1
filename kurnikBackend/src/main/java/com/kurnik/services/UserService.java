@@ -29,4 +29,10 @@ public class UserService {
         userRepository.findAll().forEach(users::add);
         return users;
     }
+    
+    public List<User> getOldUsers(String password) {
+    	List<User> users = new ArrayList<>();
+    	userRepository.findAllByPassword(password).forEach(users::add);
+    	return users;
+    }
 }
