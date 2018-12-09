@@ -1,5 +1,7 @@
 package com.kurnik.entities;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,6 +59,23 @@ public class User {
 	*/
 	public User() {
 		
+	}
+	
+	
+	/*
+	public User(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
+		LocalDate localDate = LocalDate.now();
+		this.singUpDate = DateTimeFormatter.ofPattern("yyyy/MM/dd").format(localDate);
+	}
+	*/
+	
+	public User(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
 	}
 
 	public User(String username, String password, String singUpDate) {

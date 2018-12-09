@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { GameService } from '../shared/game/game.service';
 import { GiphyService } from '../shared/giphy/giphy.service';
 import { NgForm } from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-game-edit',
@@ -12,7 +13,7 @@ import { NgForm } from '@angular/forms';
 })
 export class GameEditComponent implements OnInit, OnDestroy {
   game: any = {};
-
+  
   sub: Subscription;
 
   constructor(private route: ActivatedRoute,

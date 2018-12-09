@@ -7,30 +7,12 @@ import { GameEditComponent } from './game-edit/game-edit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/game-list', pathMatch: 'full' },
-  {
-    path: 'game-list',
-    component: GameListComponent
-  },
-  {
-    path: 'game-add',
-    component: GameEditComponent
-  },
-  {
-    path: 'game-edit/:id',
-    component: GameEditComponent
-  },
-  {
-    path: 'user-list',
-    component: UserListComponent
-  },
-  {
-    path: 'user-add',
-    component: UserEditComponent
-  },
-  {
-    path: 'user-edit/:id',
-    component: UserEditComponent
-  }
+  { path: 'game-list', component: GameListComponent },
+  { path: 'game-add', component: GameEditComponent },
+  { path: 'game-edit/:id', component: GameEditComponent },
+  { path: 'user-list',  component: UserListComponent },
+  { path: 'user-add',  component: UserEditComponent },
+  { path: 'user-edit/:id', component: UserEditComponent }
 ];
 
 @NgModule({
