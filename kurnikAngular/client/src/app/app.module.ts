@@ -8,11 +8,14 @@ import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { HttpService } from './services/http.service';
 
-import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatInputModule, MatCheckboxModule, MatProgressSpinnerModule,
+  MatListModule, MatToolbarModule } from '@angular/material';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { GameListComponent } from './game-list/game-list.component';
 import { GameEditComponent } from './game-edit/game-edit.component';
+import { RockPaperComponent } from './rock-paper/rock-paper.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { GameEditComponent } from './game-edit/game-edit.component';
     UserEditComponent,
     GameListComponent,
     GameEditComponent,
+    RockPaperComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +36,8 @@ import { GameEditComponent } from './game-edit/game-edit.component';
     MatInputModule,
     MatListModule,
     MatToolbarModule,
+    MatCheckboxModule,
+    MatProgressSpinnerModule,
     FormsModule,
     HttpClientModule
   ],
