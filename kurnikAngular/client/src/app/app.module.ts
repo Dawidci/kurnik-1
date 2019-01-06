@@ -16,6 +16,9 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 import { GameListComponent } from './game-list/game-list.component';
 import { GameEditComponent } from './game-edit/game-edit.component';
 import { RockPaperComponent } from './rock-paper/rock-paper.component';
+import { BattleshipComponent } from './battleship/battleship.component';
+
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,7 @@ import { RockPaperComponent } from './rock-paper/rock-paper.component';
     GameListComponent,
     GameEditComponent,
     RockPaperComponent,
+    BattleshipComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,8 @@ import { RockPaperComponent } from './rock-paper/rock-paper.component';
     MatCheckboxModule,
     MatProgressSpinnerModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot()
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]
