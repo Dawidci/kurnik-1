@@ -1,37 +1,41 @@
-<head>
-    <link rel="shortcut icon" href="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/chicken.png?raw=true">
-  </head>
+<body id="body" class="day">
 
-
-<mat-toolbar color="primary">
+  <mat-toolbar color="primary">
   <span>Welcome to {{title}}!</span>
-  <img src="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/chicken.png?raw=true" alt="pic" width="40" height="40"/>
+
 </mat-toolbar>
 
 <div class="container">
   <ul class="nav nav-pills">
-
-    <a href="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/sun.png">
-      <img  alt="Sun.png" src="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/sun.png?raw=true" width="20" height="20">
-      </a>
-    <a href="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/poland-flag-round-icon-64.png">
-        <img  alt="poland-flag-round-icon-64.png" src="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/poland-flag-round-icon-64.png?raw=true" width="20" height="20">
-        </a>
-    <a href="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/united-kingdom.png">
-      <img  alt="united-kingdom.png" src="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/united-kingdom.png?raw=true" width="20" height="20">
-      </a>
-   
     <li><a routerLinkActive="active" routerLink="/home">Home</a></li>
     <li><a routerLinkActive="active" routerLink="/login">Login</a></li>
     <li><a routerLinkActive="active" routerLink="/rockPaper">Rock Paper Scissors - game</a></li>
     <li><a routerLinkActive="active" routerLink="/game-list">Games - list</a></li>
-    <li><a (click)="logout()">Klik!</a></li>
+    <li><a routerLinkActive="active" routerLink="/grafika">Opcje graficzne</a></li>
     <li><a (click)="logout()">Logout</a></li>
   </ul>
 </div>
 
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
+<label for="lightswitch">
+    <img src="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/miscellaneous.png?raw=true" alt="sunmoon.png" width="32" height="32" />
+    </label>
+    <input type="checkbox" id="lightswitch" />
+   
 
-<router-outlet></router-outlet>
+    <div class="main">
+    
+
+        <div class="container">
+            <router-outlet></router-outlet>
+            <div class="features">
+          <p>
+          <router-outlet></router-outlet>
+        </p>  
+        </div>
+  
+    </div>
+    
+  </div>
+
+
+
