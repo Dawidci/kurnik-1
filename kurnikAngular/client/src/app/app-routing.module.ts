@@ -5,7 +5,6 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 import { GameListComponent } from './game-list/game-list.component';
 import { GameEditComponent } from './game-edit/game-edit.component';
 import { RockPaperComponent } from './rock-paper/rock-paper.component';
-import { BoardComponent } from './board/board.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/game-list', pathMatch: 'full' },
@@ -15,8 +14,7 @@ const routes: Routes = [
   { path: 'user-list',  component: UserListComponent },
   { path: 'user-add',  component: UserEditComponent },
   { path: 'user-edit/:id', component: UserEditComponent },
-  { path: 'rockPaper', component: RockPaperComponent},
-  { path: 'battleship', component: BoardComponent}
+  { path: 'rockPaper', component: RockPaperComponent}
 ];
 
 @NgModule({

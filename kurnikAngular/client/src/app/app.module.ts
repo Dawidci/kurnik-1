@@ -19,7 +19,6 @@ import { RockPaperComponent } from './rock-paper/rock-paper.component';
 import { BattleshipComponent } from './battleship/battleship.component';
 
 import { ToastrModule } from 'ngx-toastr';
-import { BoardComponent } from './board/board.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,6 @@ import { BoardComponent } from './board/board.component';
     GameEditComponent,
     RockPaperComponent,
     BattleshipComponent,
-    BoardComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +46,7 @@ import { BoardComponent } from './board/board.component';
     HttpClientModule,
     ToastrModule.forRoot()
   ],
-  providers: [AppComponent, HttpService],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
