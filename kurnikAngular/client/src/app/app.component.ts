@@ -10,7 +10,5 @@ import { Component, ViewEncapsulation } from '@angular/core';
 export class AppComponent {
   title = 'client';
   constructor(private httpService: HttpService) {}
-
-
 }
 

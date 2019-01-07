@@ -3,7 +3,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-  }
+  }/*
    
   * {
     margin: 0;
@@ -13,7 +13,7 @@
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
-  }
+  }*/
    
   html, body {
     height: 100%;
@@ -21,18 +21,20 @@
    
   /*Wrapper*/
   .main {
-    padding: 20px;
+    padding: 30px;
     width: 100%;
-    height: 75%;
+    height: 100%;
+    margin-bottom: 20px;
   }
+  
   label {
       
     }
   
     .features {
      width: 100%;
-    height: 75%;
-      margin: 0 ;
+     height: 75%;
+     margin: 0 ;
     }
   
     input#lightswitch:checked + .main p {
@@ -44,8 +46,7 @@
         width: 0;
         height: 0;
     }
-    
+  
   input#lightswitch:checked + .main {
     background: #222;
   }
-  
