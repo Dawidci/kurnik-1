@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'user-list',  component: UserListComponent },
   { path: 'user-add',  component: UserEditComponent },
   { path: 'user-edit/:id', component: UserEditComponent },
-  { path: 'rockPaper', component: RockPaperComponent}
+  { path: 'rockPaper', component: RockPaperComponent},
 ];
 
 @NgModule({

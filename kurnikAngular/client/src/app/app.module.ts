@@ -38,8 +38,7 @@ import { RockPaperComponent } from './rock-paper/rock-paper.component';
     MatToolbarModule,
     MatCheckboxModule,
     MatProgressSpinnerModule,
-    FormsModule,
-    HttpClientModule
+    FormsModule
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]
