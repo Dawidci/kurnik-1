@@ -16,6 +16,7 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 import { GameListComponent } from './game-list/game-list.component';
 import { GameEditComponent } from './game-edit/game-edit.component';
 import { RockPaperComponent } from './rock-paper/rock-paper.component';
+import { GrafikaComponent } from './grafika/grafika.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { RockPaperComponent } from './rock-paper/rock-paper.component';
     GameListComponent,
     GameEditComponent,
     RockPaperComponent,
+    GrafikaComponent,
   ],
   imports: [
     BrowserModule,
