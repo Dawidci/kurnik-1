@@ -1,0 +1,44 @@
+<div style="text-align:right">
+    <img class = icons alt="Polski" type="image/png" width = 32
+    src="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/poland-flag-round-icon-64.png?raw=true"> 
+    <img class = icons alt="Angielski" type="image/png" width = 32
+    src="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/united-kingdom.png?raw=true">   
+    <img class = icons alt="Kolor" type="image/png" width = 32
+    src="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/sun.png?raw=true"> 
+  </div>
+
+
+<div style="text-align:center">
+
+  <img class = logo alt="Kurnik Logo" type="image/png" 
+  src="https://github.com/Seggiana/kurnik/raw/master/src/images/chicken_512.png">
+
+  <h1>
+    {{ title }}
+  </h1>
+
+  <h2 class = register>
+    Rejestracja
+  </h2>
+
+  <label>Username:
+     <input [(ngModel)]="RejUser" placeholder="Podaj username">
+     Hasło:
+     <input [(ngModel)]="RejPass" placeholder="Podaj hasło">
+     <button>Zatwierdź</button>
+  </label>
+
+  <h2 class = login>
+    Logowanie
+  </h2>
+
+  <label>Username:
+      <input [(ngModel)]="LogUser" placeholder="Podaj username">
+      Hasło:
+      <input [(ngModel)]="LogPass" placeholder="Podaj hasło">
+      <button>Zatwierdź</button>
+   </label>
+
+</div>
+
+<router-outlet></router-outlet>
