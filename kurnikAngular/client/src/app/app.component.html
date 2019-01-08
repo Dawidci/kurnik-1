@@ -1,20 +1,46 @@
-<body id="body" class="day">
-
+<div style="height: 110vh;">
   <mat-toolbar color="primary">
-    <span>Welcome to {{title}}!</span>
+
+    <mat-toolbar-row>
+      <span>{{title}}</span>
+
+      <div>
+        <a mat-button routerLink="/home">
+          <mat-icon>how_to_reg</mat-icon>
+          <a class="link" >Home</a>
+        </a>
+
+        <a mat-button routerLink="/rockPaper">
+          <mat-icon>how_to_reg</mat-icon>
+          <a class="link" >Rock Paper Scissors</a>
+        </a>
+
+        <a mat-button routerLink="/game-list">
+          <mat-icon>how_to_reg</mat-icon>
+          <a class="link" >Games-list</a>
+        </a>
+
+        <a mat-button *ngIf="!username" routerLink="/register">
+          <mat-icon>add_circle</mat-icon>
+          <a class="link" >Register</a>
+        </a>
+        <a mat-button  *ngIf="!username" routerLink="/login">
+          <mat-icon>add_circle</mat-icon>
+          <a class="link" > Login </a>
+        </a>
+        <a mat-button  *ngIf="username" (click)="logout()">
+          <mat-icon>near_me</mat-icon>
+          <a class="link" > Logout</a>
+        </a>
+      </div>
+    </mat-toolbar-row>
   </mat-toolbar>
 
-  <div class="container">
-    <ul class="nav nav-pills">
-      <li><a routerLinkActive="active" routerLink="/home">Home</a></li>
-      <li><a routerLinkActive="active" routerLink="/login">Login</a></li>
-      <li><a routerLinkActive="active" routerLink="/rockPaper">Rock Paper Scissors - game</a></li>
-      <li><a routerLinkActive="active" routerLink="/game-list">Games - list</a></li>
-      <li><a routerLinkActive="active" routerLink="/grafika">Opcje graficzne</a></li>
-      <li><a (click)="logout()">Logout</a></li>
-    </ul>
-  </div>
+  <router-outlet></router-outlet>
 
+</div>
+
+<!--
   <label for="lightswitch">
     <img src="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/miscellaneous.png?raw=true" alt="sunmoon.png" width="32" height="32">
   </label>
@@ -23,7 +49,7 @@
 
   <div class="main">
     <div class="container">
-      <!--<router-outlet></router-outlet>-->
+      <router-outlet></router-outlet>
       <div class="features">
         <p>
           <router-outlet></router-outlet>
@@ -32,3 +58,4 @@
     </div>
   </div>
 </body>  
+-->

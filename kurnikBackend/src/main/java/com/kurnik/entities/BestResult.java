@@ -1,5 +1,6 @@
 package com.kurnik.entities;
 
+import com.kurnik.auth.entity.User;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;

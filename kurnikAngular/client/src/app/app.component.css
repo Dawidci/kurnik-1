@@ -1,3 +1,12 @@
+.link{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.example-icon {
+  padding: 0 14px;
+}
+
+
 /*Sizing & Transition*/
 *, *:after, *:before {
     -webkit-box-sizing: border-box;
@@ -50,3 +59,6 @@
   input#lightswitch:checked + .main {
     background: #222;
   }
+
+
+  

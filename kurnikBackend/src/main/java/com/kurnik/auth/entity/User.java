@@ -1,39 +1,31 @@
-package com.kurnik.entities;
+package com.kurnik.auth.entity;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
+import java.time.LocalDateTime;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import lombok.Data;
-
 @Entity
-@Table(name = "uzytkownicy")
+@Table(name = "users")
 public class User {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID_Uzytkownika")
-	private int id;
-	
-	@Column(name = "Username")
+	@GeneratedValue
+	private Long id;
+
+	private String name;
+
 	private String username;
 
-	@Column(name = "Haslo")
 	private String password;
-	
-	@Column(name = "Data_Rejestracji")
-	private String singUpDate;
+
+	private String role;
+
+	private LocalDateTime singUpDate;
+
+
 	/*
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	private List<BestResult> bestResults;
@@ -58,39 +50,27 @@ public class User {
 	}
 	*/
 	public User() {
-		
-	}
-	
-	
-	/*
-	public User(String username, String password) {
-		super();
-		this.username = username;
-		this.password = password;
-		LocalDate localDate = LocalDate.now();
-		this.singUpDate = DateTimeFormatter.ofPattern("yyyy/MM/dd").format(localDate);
-	}
-	*/
-	
-	public User(String username, String password) {
-		super();
-		this.username = username;
-		this.password = password;
 	}
 
-	public User(String username, String password, String singUpDate) {
-		super();
+	public User(String name, String username, String password, String role, LocalDateTime singUpDate) {
+		this.name = name;
 		this.username = username;
 		this.password = password;
+		this.role = role;
 		this.singUpDate = singUpDate;
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getUsername() {
@@ -109,19 +89,32 @@ public class User {
 		this.password = password;
 	}
 
-	public String getSingUpDate() {
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public LocalDateTime getSingUpDate() {
 		return singUpDate;
 	}
 
-	public void setSingUpDate(String singUpDate) {
+	public void setSingUpDate(LocalDateTime singUpDate) {
 		this.singUpDate = singUpDate;
 	}
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + ", singUpDate=" + singUpDate
-				+ "]";
+	/*
+	public User(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
+		LocalDate localDate = LocalDate.now();
+		this.singUpDate = DateTimeFormatter.ofPattern("yyyy/MM/dd").format(localDate);
 	}
+	*/
+
 	/*
 	public List<BestResult> getBestResults() {
 		return bestResults;
