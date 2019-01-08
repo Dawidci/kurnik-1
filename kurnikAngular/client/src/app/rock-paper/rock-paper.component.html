@@ -8,7 +8,7 @@ Rock Paper Scissors
 
       <div class="content1">
         <h2> You</h2>
-        <button mat-fab color="primary" class="score">{{ scores[0] }}</button>
+        <button mat-fab color="warn" class="score">{{ scores[0] }}</button>
       </div>
 
       <h3> Choose your weapon: </h3>
@@ -38,7 +38,7 @@ Rock Paper Scissors
   </mat-card>
 </div>
 
-<div *ngIf="!loading && isResultShow" class="flex-container flex-center" style="flex-direction: column">
+<div *ngIf="!loading && isResultShow" class="flex-container flex-center1" style="flex-direction: column">
   <div [ngSwitch]="theResult">
     <ng-template [ngSwitchCase]= "0"> <h1> You're the winner! </h1></ng-template>
     <ng-template [ngSwitchCase]= "1"> <h1> You lose. </h1> </ng-template>

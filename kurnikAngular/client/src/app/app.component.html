@@ -1,3 +1,5 @@
+<body>
+
 <div style="height: 110vh;">
   <mat-toolbar color="primary">
 
@@ -36,10 +38,26 @@
     </mat-toolbar-row>
   </mat-toolbar>
 
-  <router-outlet></router-outlet>
+  
 
+  <label for="lightswitch">
+      <img src="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/miscellaneous.png?raw=true" alt="sunmoon.png" width="32" height="32">
+    </label>
+  
+    <input type="checkbox" id="lightswitch" (change)="setDarkTheme()"> 
+
+    <div class="main">
+        <div class="container"><div class="features">
+            <p>
+          <router-outlet></router-outlet>
+              <router-outlet></router-outlet>
+            </p>  
+          </div>
+        </div>
+      </div>
+    
 </div>
-
+</body>
 <!--
   <label for="lightswitch">
     <img src="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/miscellaneous.png?raw=true" alt="sunmoon.png" width="32" height="32">

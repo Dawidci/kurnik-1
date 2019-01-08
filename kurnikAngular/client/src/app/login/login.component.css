@@ -29,4 +29,8 @@ input.example-right-align {
   -moz-appearance: textfield;
 }
 
+::ng-deep .mat-card{
+  background-color: #3e51b4 ;
+  color: #ffffff;
+}
 

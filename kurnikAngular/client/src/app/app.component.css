@@ -32,18 +32,19 @@
   .main {
     padding: 30px;
     width: 100%;
-    height: 100%;
-    margin-bottom: 20px;
+    height: 110%;
+    margin-bottom: 0px;
   }
   
   label {
-      
+    position: absolute;
+    top: 25px;
+    right:25px;
     }
   
     .features {
      width: 100%;
-     height: 75%;
-     margin: 0 ;
+     height: 100%;
     }
   
     input#lightswitch:checked + .main p {
@@ -60,5 +61,12 @@
     background: #222;
   }
 
+  input#lightswitch+ .main {
+    background: whitesmoke;
+  }
+  
+  body {
+    background-color: #3e51b4;
+  }
 
   
