@@ -7,17 +7,17 @@
       <span>{{title}}</span>
 
       <div>
-        <a mat-button routerLink="/home">
+        <a mat-button *ngIf="username" routerLink="/home">
           <mat-icon>how_to_reg</mat-icon>
           <a class="link" >Home</a>
         </a>
 
-        <a mat-button routerLink="/rockPaper">
+        <a mat-button *ngIf="username" routerLink="/rockPaper">
           <mat-icon>how_to_reg</mat-icon>
           <a class="link" >Rock Paper Scissors</a>
         </a>
 
-        <a mat-button routerLink="/game-list">
+        <a mat-button *ngIf="username" routerLink="/game-list">
           <mat-icon>how_to_reg</mat-icon>
           <a class="link" >Games-list</a>
         </a>
