@@ -17,19 +17,26 @@
           <a class="link" >Rock Paper Scissors</a>
         </a>
 
+        <a mat-button  *ngIf="username" routerLink="/pong">
+          <mat-icon>how_to_reg</mat-icon>
+          <a class="link" > Pong </a>
+        </a>
+
         <a mat-button *ngIf="username" routerLink="/game-list">
           <mat-icon>how_to_reg</mat-icon>
-          <a class="link" >Games-list</a>
+          <a class="link" >Games list</a>
         </a>
 
         <a mat-button *ngIf="!username" routerLink="/register">
           <mat-icon>add_circle</mat-icon>
           <a class="link" >Register</a>
         </a>
+
         <a mat-button  *ngIf="!username" routerLink="/login">
           <mat-icon>add_circle</mat-icon>
           <a class="link" > Login </a>
         </a>
+
         <a mat-button  *ngIf="username" (click)="logout()">
           <mat-icon>near_me</mat-icon>
           <a class="link" > Logout</a>
@@ -58,22 +65,3 @@
     
 </div>
 </body>
-<!--
-  <label for="lightswitch">
-    <img src="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/miscellaneous.png?raw=true" alt="sunmoon.png" width="32" height="32">
-  </label>
-
-  <input type="checkbox" id="lightswitch">  
-
-  <div class="main">
-    <div class="container">
-      <router-outlet></router-outlet>
-      <div class="features">
-        <p>
-          <router-outlet></router-outlet>
-        </p>  
-      </div>
-    </div>
-  </div>
-</body>  
--->
