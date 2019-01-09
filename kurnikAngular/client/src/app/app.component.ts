@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'client';
+  title = 'Kurnik Ali';
   username : string;
   role : string;
   constructor(private router: Router, private httpService: HttpService) {
