@@ -1,0 +1,16 @@
+h1 {
+    font-family: "Impact", Charcoal, sans-sarif;
+    font-size: 50px;
+}
+
+/*.logo {
+    margin: 30px 0 0 0; /*margin: top right bottom left*/
+/*}*/
+
+input {
+    margin: 0 20px 0 0;
+}
+
+.icons {
+    margin: 5px 5px 0 5px;
+}

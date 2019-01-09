@@ -35,6 +35,7 @@ import { OverlayModule } from "@angular/cdk/overlay";
 import { PongComponent } from './pong/pong.component';
 import { SnakeComponent } from './snake/snake.component';
 import { BestScoreManager } from './snake/storage';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { BestScoreManager } from './snake/storage';
     LoginComponent,
     PongComponent,
     SnakeComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
