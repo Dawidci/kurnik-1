@@ -31,7 +31,8 @@ import { RockPaperComponent } from './rock-paper/rock-paper.component';
 
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import {OverlayModule} from "@angular/cdk/overlay";
+import { OverlayModule } from "@angular/cdk/overlay";
+import { PongComponent } from './pong/pong.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import {OverlayModule} from "@angular/cdk/overlay";
     RockPaperComponent,
     RegisterComponent,
     LoginComponent,
+    PongComponent,
   ],
   imports: [
     BrowserModule,
