@@ -22,6 +22,11 @@
           <a class="link" > Pong </a>
         </a>
 
+        <a mat-button  *ngIf="username" routerLink="/snake">
+          <mat-icon>how_to_reg</mat-icon>
+          <a class="link" > Snake </a>
+        </a>
+
         <a mat-button *ngIf="username" routerLink="/game-list">
           <mat-icon>how_to_reg</mat-icon>
           <a class="link" >Games list</a>
@@ -44,8 +49,6 @@
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
-
-  
 
   <label for="lightswitch">
       <img src="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/miscellaneous.png?raw=true" alt="sunmoon.png" width="32" height="32">

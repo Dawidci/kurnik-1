@@ -8,6 +8,7 @@ import { RockPaperComponent } from './rock-paper/rock-paper.component';
 import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
 import { PongComponent } from './pong/pong.component';
+import { SnakeComponent } from './snake/snake.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/game-list', pathMatch: 'full' },
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'rockPaper', component: RockPaperComponent},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
-  { path: 'pong', component: PongComponent}
+  { path: 'pong', component: PongComponent},
+  { path: 'snake', component: SnakeComponent}
 ];
 
 @NgModule({

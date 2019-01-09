@@ -33,6 +33,8 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { OverlayModule } from "@angular/cdk/overlay";
 import { PongComponent } from './pong/pong.component';
+import { SnakeComponent } from './snake/snake.component';
+import { BestScoreManager } from './snake/storage';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { PongComponent } from './pong/pong.component';
     RegisterComponent,
     LoginComponent,
     PongComponent,
+    SnakeComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,7 @@ import { PongComponent } from './pong/pong.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [AppComponent, HttpService],
+  providers: [AppComponent, HttpService, BestScoreManager],
   bootstrap: [AppComponent],
   entryComponents: [
   ],
