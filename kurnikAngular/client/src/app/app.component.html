@@ -59,12 +59,13 @@
     <div class="main">
         <div class="container"><div class="features">
             <p>
+                
           <router-outlet></router-outlet>
               <router-outlet></router-outlet>
             </p>  
           </div>
         </div>
       </div>
-    
+      <div class="label2"> Witaj świecie, jest: {{timer.currentDateTime | date:'MM.dd.yyyy HH:mm'}}!  </div>
 </div>
 </body>

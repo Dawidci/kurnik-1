@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { HttpService } from './services/http.service';
+import { RouterModule, Routes } from '@angular/router';
 
 import {
   MatButtonModule,
@@ -36,6 +37,15 @@ import { PongComponent } from './pong/pong.component';
 import { SnakeComponent } from './snake/snake.component';
 import { BestScoreManager } from './snake/storage';
 import { HomeComponent } from './home/home.component';
+import { Time } from './timer/timer.component';
+
+const appRoutes: Routes = [
+  {
+    path: 'timer',
+    component: Time,
+    data: { title: 'Timer' }
+  },
+];
 
 @NgModule({
   declarations: [
@@ -50,6 +60,7 @@ import { HomeComponent } from './home/home.component';
     PongComponent,
     SnakeComponent,
     HomeComponent,
+    Time,
   ],
   imports: [
     BrowserModule,
@@ -70,6 +81,7 @@ import { HomeComponent } from './home/home.component';
     MatProgressSpinnerModule,
     FormsModule,
     HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [AppComponent, HttpService, BestScoreManager],
   bootstrap: [AppComponent],

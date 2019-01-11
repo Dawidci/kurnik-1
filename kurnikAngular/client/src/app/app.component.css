@@ -41,6 +41,17 @@
     top: 25px;
     right:25px;
     }
+
+  .label2 {
+    position: absolute;
+    top: 30px;
+    right:100px;
+    color: whitesmoke;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+  
+  }  
+
   
     .features {
      width: 100%;
