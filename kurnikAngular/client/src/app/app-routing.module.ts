@@ -10,6 +10,7 @@ import {RegisterComponent} from "./register/register.component";
 import { PongComponent } from './pong/pong.component';
 import { SnakeComponent } from './snake/snake.component';
 import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'pong', component: PongComponent},
   { path: 'snake', component: SnakeComponent},
-  { path: 'home', component: HomeComponent}
+  { path: 'home', component: HomeComponent},
+  { path: 'profile', component: ProfileComponent},
 ];
 
 @NgModule({

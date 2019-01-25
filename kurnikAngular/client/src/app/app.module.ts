@@ -38,6 +38,7 @@ import { SnakeComponent } from './snake/snake.component';
 import { BestScoreManager } from './snake/storage';
 import { HomeComponent } from './home/home.component';
 import { Time } from './timer/timer.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
   {
@@ -61,6 +62,7 @@ const appRoutes: Routes = [
     SnakeComponent,
     HomeComponent,
     Time,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

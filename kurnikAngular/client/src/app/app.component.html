@@ -42,6 +42,22 @@
           <a class="link" > Login </a>
         </a>
 
+        <a mat-button *ngIf="!role">
+            <a> NieRola </a>
+          </a>
+
+        <a mat-button *ngIf="role">
+            <a> Rola </a>
+          </a>
+
+        <a mat-button *ngIf="role==='admin'">
+          <a> Admin </a>
+        </a>
+
+        <a mat-button *ngIf="role==='user'">
+          <a> User </a>
+        </a>
+
         <a mat-button  *ngIf="username" (click)="logout()">
           <mat-icon>near_me</mat-icon>
           <a class="link" > Logout</a>

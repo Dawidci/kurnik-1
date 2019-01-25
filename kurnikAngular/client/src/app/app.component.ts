@@ -11,8 +11,10 @@ import { RestService } from './rest.service';
 })
 export class AppComponent implements OnInit {
   title = 'Kurnik Ali';
+
   username : string;
   role : string;
+
   constructor(private router: Router, private httpService: HttpService, public rest:RestService, private route: ActivatedRoute) {
     this.getTimer();   
   }
