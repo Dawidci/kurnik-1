@@ -24,29 +24,7 @@ public class Game {
 	
 	@Column(name = "Nazwa")
 	private String title;
-	/*
-	@OneToMany(mappedBy = "game", cascade = CascadeType.ALL)
-	private List<BestResult> bestResults;
 
-	@OneToMany(mappedBy = "game", cascade = CascadeType.ALL)
-	private List<UserResult> userResults;
-	
-	public void add(BestResult tempBestResult) {
-		if(bestResults == null) {
-			bestResults = new ArrayList<>();
-		}
-		bestResults.add(tempBestResult);
-		tempBestResult.setGame(this);
-	}
-	
-	public void add(UserResult tempUserResult) {
-		if(userResults == null) {
-			userResults = new ArrayList<>();
-		}
-		userResults.add(tempUserResult);
-		tempUserResult.setGame(this);
-	}
-	*/
 	public Game() {
 
 	}
@@ -77,21 +55,5 @@ public class Game {
 	public String toString() {
 		return "Game [id=" + id + ", title=" + title + "]";
 	}
-	/*
-	public List<BestResult> getBestResults() {
-		return bestResults;
-	}
 
-	public void setBestResults(List<BestResult> bestResults) {
-		this.bestResults = bestResults;
-	}
-
-	public List<UserResult> getUserResults() {
-		return userResults;
-	}
-
-	public void setUserResults(List<UserResult> userResults) {
-		this.userResults = userResults;
-	}
-	*/
 }

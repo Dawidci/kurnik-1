@@ -25,30 +25,6 @@ public class User {
 
 	private LocalDateTime singUpDate;
 
-
-	/*
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-	private List<BestResult> bestResults;
-	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-	private List<UserResult> userResults;
-	
-	public void add(BestResult tempBestResult) {
-		if(bestResults == null) {
-			bestResults = new ArrayList<>();
-		}
-		bestResults.add(tempBestResult);
-		tempBestResult.setUser(this);
-	}
-	
-	public void add(UserResult tempUserResult) {
-		if(userResults == null) {
-			userResults = new ArrayList<>();
-		}
-		userResults.add(tempUserResult);
-		tempUserResult.setUser(this);
-	}
-	*/
 	public User() {
 	}
 
@@ -104,33 +80,5 @@ public class User {
 	public void setSingUpDate(LocalDateTime singUpDate) {
 		this.singUpDate = singUpDate;
 	}
-
-	/*
-	public User(String username, String password) {
-		super();
-		this.username = username;
-		this.password = password;
-		LocalDate localDate = LocalDate.now();
-		this.singUpDate = DateTimeFormatter.ofPattern("yyyy/MM/dd").format(localDate);
-	}
-	*/
-
-	/*
-	public List<BestResult> getBestResults() {
-		return bestResults;
-	}
-
-	public void setBestResults(List<BestResult> bestResults) {
-		this.bestResults = bestResults;
-	}
-
-	public List<UserResult> getUserResults() {
-		return userResults;
-	}
-
-	public void setUserResults(List<UserResult> userResults) {
-		this.userResults = userResults;
-	}
-	*/
 }
 	

@@ -29,7 +29,12 @@
 
         <a mat-button *ngIf="username" routerLink="/game-list">
           <mat-icon>how_to_reg</mat-icon>
-          <a class="link" >Games list</a>
+          <a class="link" >Wish list</a>
+        </a>
+
+        <a mat-button *ngIf="username" routerLink="/profile">
+          <mat-icon>how_to_reg</mat-icon>
+          <a class="link" >Profile</a>
         </a>
 
         <a mat-button *ngIf="!username" routerLink="/register">
@@ -41,14 +46,6 @@
           <mat-icon>add_circle</mat-icon>
           <a class="link" > Login </a>
         </a>
-
-        <a mat-button *ngIf="!role">
-            <a> NieRola </a>
-          </a>
-
-        <a mat-button *ngIf="role">
-            <a> Rola </a>
-          </a>
 
         <a mat-button *ngIf="role==='admin'">
           <a> Admin </a>
