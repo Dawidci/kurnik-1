@@ -40,7 +40,7 @@ export class PongComponent implements OnInit {
     if (this.pongGame.gameOver()) {
       this.context.font = "30px Arial";
       this.context.fillText("Game Over!", 50, 50);
-      setTimeout(() => location.reload(), 500);
+     // setTimeout(() => location.reload(), 500);
       return;
     }
 

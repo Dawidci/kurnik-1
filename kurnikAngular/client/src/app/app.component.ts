@@ -3,6 +3,8 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import { ActivatedRoute} from '@angular/router';
 import { RestService } from './rest.service';
+import {LanguageService} from './services/language.service';
+import {LocalStorageService} from './services/local-storage.service';
 
 @Component({
   selector: 'app-root',
@@ -14,23 +16,35 @@ export class AppComponent implements OnInit {
 
   username : string;
   role : string;
+  contentEditable: boolean = false;
 
-  constructor(private router: Router, private httpService: HttpService, public rest:RestService, private route: ActivatedRoute) {
-    this.getTimer();   
+  constructor(private router: Router, private httpService: HttpService, public rest:RestService, private route: ActivatedRoute, private languageService: LanguageService) {
+    this.getTimer(); 
+    //this.changeLanguage("EN");  
   }
     timer: any = [];
     interval: any;
+    languagesShorts;
+    messages;
 
 
     ngOnInit() {
+      this.getTimer();
       this.username = sessionStorage.getItem('username');
       this.role = sessionStorage.getItem('role');
+      this.messages = this.languageService.getCurrentLanguage().messages;
+      this.languagesShorts = this.languageService.getAllLanguagesShorts();
       console.log(this.username);
       console.log(this.role);
     this.interval = setInterval(()=>{
-      this.getTimer();
+      
   }, 10000);
 
+    }
+
+    changeLanguage(languageShort) {
+      this.languageService.setCurrentLanguageByShort(languageShort);
+      this.messages = this.languageService.getCurrentLanguage().messages;
     }
 
     getTimer(){
@@ -48,6 +62,18 @@ export class AppComponent implements OnInit {
       window.location.reload();
       this.router.navigateByUrl('/home');
     }
+  
+    toggleEditable(event) {
+      if ( event.target.checked ) {
+          this.contentEditable = true;
+          this.changeLanguage("PL");
+     }
+     else{
+      this.contentEditable = false;
+      this.changeLanguage("EN");
+     }
+      
+ }
 
     /*
   constructor(public rest:RestService, 

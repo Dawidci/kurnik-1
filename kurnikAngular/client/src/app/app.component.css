@@ -36,7 +36,7 @@
     margin-bottom: 0px;
   }
   
-  label {
+  .label {
     position: absolute;
     top: 25px;
     right:25px;
@@ -45,12 +45,17 @@
   .label2 {
     position: absolute;
     top: 30px;
-    right:100px;
+    right:120px;
     color: whitesmoke;
     font-weight: bold;
     text-shadow: 1px 1px black;
   
   }  
+  .label3 {
+    position: absolute;
+    top: 25px;
+    right:70px;
+    }
 
   
     .features {
@@ -67,6 +72,12 @@
         width: 0;
         height: 0;
     }
+
+    input#language {
+      opacity: 0;
+      width: 0;
+      height: 0;
+  }
   
   input#lightswitch:checked + .main {
     background: #222;

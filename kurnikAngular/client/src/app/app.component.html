@@ -9,7 +9,7 @@
       <div>
         <a mat-button routerLink="/home">
           <mat-icon>how_to_reg</mat-icon>
-          <a class="link" >Home</a>
+          <a class="link" >{{messages.home.Home}}</a>
         </a>
 
         <a mat-button *ngIf="username" routerLink="/rockPaper">
@@ -66,18 +66,28 @@
     </mat-toolbar-row>
   </mat-toolbar>
 
-  <label for="lightswitch">
+  <label class="label" for="lightswitch">
       <img src="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/miscellaneous.png?raw=true" alt="sunmoon.png" width="32" height="32">
     </label>
   
-    <input type="checkbox" id="lightswitch" (change)="setDarkTheme()"> 
+    <input type="checkbox" id="lightswitch"> 
+ 
+  
+    
 
     <div class="main">
         <div class="container"><div class="features">
             <p>
-                
-          <router-outlet></router-outlet>
-              <router-outlet></router-outlet>
+         <router-outlet></router-outlet>
+
+         <label class="label3" for="language">
+          <img src="https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/poland-flag-round-icon-64.png?raw=true" alt="Poland.png" width="32" height="32">
+        </label>
+      
+          <input type="checkbox" id="language" (change)="toggleEditable($event)"> 
+       {{contentEditable}}
+       
+        
             </p>  
           </div>
         </div>

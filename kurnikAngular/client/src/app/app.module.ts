@@ -29,7 +29,7 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 import { GameListComponent } from './game-list/game-list.component';
 import { GameEditComponent } from './game-edit/game-edit.component';
 import { RockPaperComponent } from './rock-paper/rock-paper.component';
-
+import { GrafikaComponent } from './grafika/grafika.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { OverlayModule } from "@angular/cdk/overlay";
@@ -39,6 +39,7 @@ import { BestScoreManager } from './snake/storage';
 import { HomeComponent } from './home/home.component';
 import { Time } from './timer/timer.component';
 import { ProfileComponent } from './profile/profile.component';
+import { from } from 'rxjs';
 
 const appRoutes: Routes = [
   {
@@ -46,7 +47,7 @@ const appRoutes: Routes = [
     component: Time,
     data: { title: 'Timer' }
   },
-];
+];  
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ const appRoutes: Routes = [
     GameListComponent,
     GameEditComponent,
     RockPaperComponent,
+    GrafikaComponent,
     RegisterComponent,
     LoginComponent,
     PongComponent,

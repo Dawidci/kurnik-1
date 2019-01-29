@@ -1,0 +1,80 @@
+{
+  "languages":[{
+    "id": 1,
+    "value": "English",
+    "short": "EN",
+    "code": "001",
+    "messages":{
+      "home":{
+        "register": "Rgister",
+        "login": "Login",
+        "home": "Home",
+        "HenHouse": "Kurnik Ali",
+        "Helloworld": "Hello world, it's:",
+        "Name":"Name",
+        "Username":"Username",
+        "Password":"Password",
+        "Entr": "Enter your password",
+        "RPS":"Rock Paper Scissors",
+        "You": "You",
+        "Player2":"Player2",
+        "Weapon":"Choose your weapon",
+        "Loser": "You lose.",
+        "Winner": "You're the winner!",
+        "Tie": "It's a tie!",
+        "Pick": "Pick again to continue or",
+        "Reset": "Reset score",
+        "Snake": "Snake",
+        "Score": "Score",
+        "BestSc": "Best Score",
+        "StartGame": "Start Game",
+        "SelectMode": "Select Mode",
+        "Classic":"Classic",
+        "No Walls":"No walls",
+        "Obstacles": "Obstacles",
+        "GameOver": "GameOver",
+        "Logout": "Logout"
+      }
+
+    }
+  },
+    {
+      "id": 2,
+      "value": "Polski",
+      "short": "PL",
+      "code": "002",
+      "messages":{
+        "home":{
+          "register": "Rejestracja",
+          "login": "Logowanie",
+          "home": "Strona główna",
+          "HenHouse": "Kurnik Ali",
+          "Helloworld": "Witaj świecie, jest:",
+          "Name":"Imię",
+          "Username":"Login",
+          "Password":"Hasło",
+          "Entr": "Wpisz swoje hasło",
+          "RPS":"Kamień Papier NOŻYCE",
+          "You": "Ty",
+          "Player2":"Gracz 2",
+          "Weapon":"Wybierz broń",
+          "Loser": "Przegrana",
+          "Winner": "Wygrana",
+          "Tie": "Remis",
+          "Pick": "Wybierz jeszcze raz, albo",
+          "Reset": "Zresetuj",
+          "Snake": "Schnek",
+          "Score": "Wynik",
+          "BestSc": "Najlepszy wynik",
+          "StartGame": "Rozpocznij grę",
+          "SelectMode": "Wybierz tryb",
+          "Classic":"Klasyczny",
+          "No Walls":"Brak ścian",
+          "Obstacles": "Z przeszkodami",
+          "GameOver": "Koniec gry",
+          "Logout": "Wyloguj"
+        }
+      }
+    }]
+
+}
