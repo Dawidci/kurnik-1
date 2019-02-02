@@ -3,6 +3,9 @@ import { Controls } from '../enums/controls';
 import { PongGame } from '../classes/pong-game';
 import { Boundaries } from '../classes/boundaries';
 import { ControlState } from '../classes/control-state';
+import { Subscription } from 'rxjs';
+import { LanguageService } from '../services/language.service';
+
 
 @Component({
   selector: 'pong',
@@ -11,36 +14,66 @@ import { ControlState } from '../classes/control-state';
 })
 export class PongComponent implements OnInit {
   @ViewChild('PongCanvas') canvasElement: ElementRef
-
+  languageSubscription: Subscription;
+  messages;
   public width: number = 800;
   public height: number = 600;
+  public which: number = 0;
 
   private context: CanvasRenderingContext2D;
   private pongGame: PongGame;
   private ticksPerSecond: number = 60;
 
   private controlState: ControlState; 
+  show: boolean = true;
 
-  constructor() {
+ 
+
+  constructor(private languageService: LanguageService) {
     this.pongGame = new PongGame(this.height,this.width);
     this.controlState = { upPressed: false, downPressed: false };
   }
 
   ngOnInit() {
     this.context = this.canvasElement.nativeElement.getContext('2d');
-    this.renderFrame();
-
+    this.subscribeOnLanguageChange();
     // Game model ticks 60 times per second. Doing this keeps same game speed
     // on higher FPS environments.
     setInterval(() => this.pongGame.tick(this.controlState), 1 / this.ticksPerSecond);
   }
 
+  private subscribeOnLanguageChange() {
+    this.languageSubscription = this.languageService.langSrc$
+      .subscribe((language: any) => {
+        this.messages = language.messages;
+      });
+    this.messages = this.languageService.getCurrentLanguage().messages;
+  
+  }
+
+  wait(ms): void{
+    var start = new Date().getTime();
+    var end = start;
+    while(end < start + ms) {
+      end = new Date().getTime();
+   }
+ }
+
+  onClick():void{
+    this.wait(10000);
+    this.renderFrame();
+  }
+
+  ngOnDestroy(){
+    this.languageSubscription.unsubscribe();
+  }
+
   renderFrame(): void {
+    this.show = false;
     // Only run if game still going
     if (this.pongGame.gameOver()) {
       this.context.font = "30px Arial";
-      this.context.fillText("Game Over!", 50, 50);
-     // setTimeout(() => location.reload(), 500);
+      this.context.fillText(this.messages.home.GameOver, 50, 50);
       return;
     }
 
@@ -67,9 +100,11 @@ export class PongComponent implements OnInit {
     let ballObj = this.pongGame.ball;
     bounds = ballObj.getCollisionBoundaries();
     this.context.fillRect(bounds.left, bounds.top, ballObj.getWidth(), ballObj.getHeight());
-
+    
+  
     // Render next frame
     window.requestAnimationFrame(() => this.renderFrame());
+
   }
 
   @HostListener('window:keydown', ['$event'])

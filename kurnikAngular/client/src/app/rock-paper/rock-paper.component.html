@@ -1,17 +1,18 @@
 <mat-toolbar color="primary">
-Rock Paper Scissors
+{{messages.home.RPS}}
 </mat-toolbar>
-  
+<p><b>{{messages.home.Instructions}}</b></p>
+<p>{{messages.home.RockInstructions}}</p>
 <div class="content">
   <mat-card>
     <mat-card-content>
 
       <div class="content1">
-        <h2> You</h2>
+        <h2> {{messages.home.You}} </h2>
         <button mat-fab color="warn" class="score">{{ scores[0] }}</button>
       </div>
 
-      <h3> Choose your weapon: </h3>
+      <h3> {{messages.home.Weapon}}: </h3>
       <div  class="content2">
         <img (click)="pick(0)" [ngClass]="{'selectedWeapon':(playerSelected === 0)}" src = "https://pngimage.net/wp-content/uploads/2018/05/dwayne-johnson-face-png.png" alt = "Fist" height = 128>
         <img (click)="pick(1)" [ngClass]="{'selectedWeapon':(playerSelected === 1)}" src = "http://cdn.onlinewebfonts.com/svg/img_533582.png" alt = "Paper" height = 128>
@@ -23,7 +24,7 @@ Rock Paper Scissors
   <mat-card>
     <mat-card-content>
       <div class="content1">
-        <h2> Player 2</h2>
+        <h2> {{messages.home.Player2}}</h2>
         <button mat-fab color="accent" class="score">{{ scores[1] }}</button>
       </div>
 
@@ -40,14 +41,14 @@ Rock Paper Scissors
 
 <div *ngIf="!loading && isResultShow" class="flex-container flex-center1" style="flex-direction: column">
   <div [ngSwitch]="theResult">
-    <ng-template [ngSwitchCase]= "0"> <h1> You're the winner! </h1></ng-template>
-    <ng-template [ngSwitchCase]= "1"> <h1> You lose. </h1> </ng-template>
-    <ng-template [ngSwitchCase]= "2"> <h1>It's a tie! </h1> </ng-template>
+    <ng-template [ngSwitchCase]= "0"> <h1>{{messages.home.Winner}} </h1></ng-template>
+    <ng-template [ngSwitchCase]= "1"> <h1> {{messages.home.Loser}} </h1> </ng-template>
+    <ng-template [ngSwitchCase]= "2"> <h1>{{messages.home.Tie}} </h1> </ng-template>
     <ng-template ngSwitchDefault> </ng-template>
   </div> 
 
-  <p> Pick again to continue or </p>
-  <button  (click)="reset()" mat-raised-button  color="primary"> Reset score</button>
+  <p> {{messages.home.Pick}}</p>
+  <button  (click)="reset()" mat-raised-button  color="primary"> {{messages.home.Reset}}</button>
 </div>
   
 <div class="flex-container flex-center" *ngIf="loading">

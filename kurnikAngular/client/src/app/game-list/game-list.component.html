@@ -1,15 +1,16 @@
 <mat-card>
-  <mat-card-title>Game List</mat-card-title>
+  <mat-card-title>{{messages.home.gamelist}}</mat-card-title>
   <mat-card-content>
     <mat-list>
       <mat-list-item *ngFor="let game of games">
         <img mat-list-avatar src="{{game.giphyUrl}}" alt="{{game.title}}">
         <h3 mat-line>
-            <a mat-button [routerLink]="['/game-edit', game.id]">{{game.title}}</a>
+            <a mat-button *ngIf = "role ==='admin'" [routerLink]="['/game-edit', game.id]">{{game.title}}</a> 
+            <a *ngIf = "role ==='user'">{{game.title}}</a>
         </h3>
       </mat-list-item>
     </mat-list>
   </mat-card-content>
 
-  <button mat-fab color="warn" [routerLink]="['/game-add']">Add</button>
+  <button mat-fab color="warn" [routerLink]="['/game-add']">{{messages.home.Add}}</button>
 </mat-card>

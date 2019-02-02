@@ -18,6 +18,8 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
     this.username = sessionStorage.getItem('username');
     this.role = sessionStorage.getItem('role');
+    this.date = sessionStorage.getItem('singUpDate');
+    this.name = sessionStorage.getItem('name');
   }
 
 }

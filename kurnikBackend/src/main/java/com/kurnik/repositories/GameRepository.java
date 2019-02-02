@@ -9,5 +9,5 @@ import com.kurnik.entities.Game;
 @RepositoryRestResource
 @CrossOrigin(origins = "http://localhost:4200")
 public interface GameRepository extends JpaRepository<Game,Integer> {
-
+    void deleteById(String Id);
 }

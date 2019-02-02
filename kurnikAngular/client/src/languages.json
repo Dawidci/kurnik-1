@@ -6,7 +6,7 @@
     "code": "001",
     "messages":{
       "home":{
-        "register": "Rgister",
+        "register": "Register",
         "login": "Login",
         "home": "Home",
         "HenHouse": "Kurnik Ali",
@@ -19,6 +19,7 @@
         "You": "You",
         "Player2":"Player2",
         "Weapon":"Choose your weapon",
+        "pong":"Pong",
         "Loser": "You lose.",
         "Winner": "You're the winner!",
         "Tie": "It's a tie!",
@@ -33,7 +34,26 @@
         "No Walls":"No walls",
         "Obstacles": "Obstacles",
         "GameOver": "GameOver",
-        "Logout": "Logout"
+        "Logout": "Logout",
+        "gamelist": "Wish List",
+        "Add": "Add",
+        "Instructions": "Instructions:",
+        "RockInstructions": "Pick a weapon and wait for your rival's choice",
+        "SnakeInstruction": "Select one of available modes and play.",
+        "PongInstruction": "Wait for your rival and play.",
+        "Racket":"Racket",
+        "Controls": "Controls:",
+        "Up":"Up",
+        "Down":"Down",
+        "Left":"Left",
+        "Right":"Right",
+        "Edit":"Edit",
+        "Game":"Game",
+        "Title":"Game Title",
+        "Cancel": "Cancel",
+        "Save": "Save",
+        "Rival": "Searching for a rival"
+
       }
 
     }
@@ -54,10 +74,11 @@
           "Username":"Login",
           "Password":"Hasło",
           "Entr": "Wpisz swoje hasło",
-          "RPS":"Kamień Papier NOŻYCE",
+          "RPS":"Kamień Papier Nożyce",
           "You": "Ty",
           "Player2":"Gracz 2",
           "Weapon":"Wybierz broń",
+          "pong":"Pong",
           "Loser": "Przegrana",
           "Winner": "Wygrana",
           "Tie": "Remis",
@@ -72,7 +93,26 @@
           "No Walls":"Brak ścian",
           "Obstacles": "Z przeszkodami",
           "GameOver": "Koniec gry",
-          "Logout": "Wyloguj"
+          "Logout": "Wyloguj",
+          "gamelist": "Lista życzeń",
+          "Add": "Dodaj",
+          "Instructions": "Instrukcja:",
+          "RockInstructions": "Wybierz jedną z dostępnych broni i czekaj na wybór przeciwnika",
+          "SnakeInstruction": "Wybierz jednen z dostępnych trybów i zagraj.",
+          "PongInstruction": "Poczekaj na przeciwnika i zagraj.",
+          "Racket":"Paletka",
+          "Controls": "Obsluga sterowania:",
+          "Up":"Do góry",
+          "Down":"Do dołu",
+          "Left":"W lewo",
+          "Right":"W prawo",
+          "Edit":"Edytuj",
+          "Game":"Grę",
+          "Title":"Tytuł gry",
+          "Cancel":"Anuluj",
+          "Save": "Zapisz",
+          "Rival": "Wyszukuje przeciwnika"
+          
         }
       }
     }]

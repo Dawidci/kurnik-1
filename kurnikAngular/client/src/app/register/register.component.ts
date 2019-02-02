@@ -5,6 +5,9 @@ import {RegisterService} from "../register.service";
 import {LoginForm, User} from "../entities";
 import {MatSnackBar} from "@angular/material";
 import {MessageService} from "../message.service";
+import { Subscription } from 'rxjs';
+import { LanguageService } from '../services/language.service';
+
 
 @Component({
   selector: 'app-register',
@@ -15,15 +18,30 @@ export class RegisterComponent implements OnInit {
 
   hide = true;
   registerForm: FormGroup;
+  languageSubscription: Subscription;
+  messages;
 
 
-  constructor(private messageService: MessageService, private router: Router, private registerService: RegisterService, private formBuilder: FormBuilder) {
+  constructor(private messageService: MessageService, private router: Router, private registerService: RegisterService,  private languageService: LanguageService,private formBuilder: FormBuilder) {
   }
 
   ngOnInit() {
     this.registerForm = this.createFormGroup();
+    this.subscribeOnLanguageChange();
   }
 
+  private subscribeOnLanguageChange() {
+    this.languageSubscription = this.languageService.langSrc$
+      .subscribe((language: any) => {
+        this.messages = language.messages;
+      });
+    this.messages = this.languageService.getCurrentLanguage().messages;
+  }
+
+
+  ngOnDestroy(){
+    this.languageSubscription.unsubscribe();
+  }
 
   onSubmit(formValues) {
     const newUser = new User(

@@ -1,1 +1,16 @@
+
+<div *ngIf="show">
+ <img src='https://github.com/Seggiana/kurnik/blob/master/AlaKurnik/Tak.png?raw=true'/>
+ <mat-spinner class="progres"></mat-spinner>
+ <h1>{{messages.home.Rival}}</h1>
+</div>
+
 <canvas #PongCanvas width="{{width}}" height="{{height}}"></canvas>
+
+<p><b>{{messages.home.Instructions}}</b><br>
+    {{messages.home.PongInstruction}}<br>
+    {{messages.home.Controls}}<br>
+    <b>&nbsp;W: </b> {{messages.home.Racket}} {{messages.home.Up}}<br>
+    <b>&nbsp;S: </b> {{messages.home.Racket}} {{messages.home.Down}}<br>
+
+<button mat-button (click)="onClick()" class="pong">{{messages.home.StartGame}}</button></p>

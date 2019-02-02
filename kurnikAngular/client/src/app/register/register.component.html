@@ -3,19 +3,19 @@
   <mat-card-content>
     <form class="example-container" [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)" >
       <mat-card-header>
-        <mat-card-title>Register:</mat-card-title>
+        <mat-card-title>{{messages.home.register}}:</mat-card-title>
       </mat-card-header>
       <mat-form-field>
-        <input matInput placeholder="name" formControlName="name" required>
+        <input matInput placeholder="name" autocomplete="off" formControlName="name" required>
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="username" formControlName="username" required>
+        <input matInput placeholder="username" autocomplete="off" formControlName="username" required>
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="password" [type]="hide ? 'password' : 'text'" formControlName="password" required>
+        <input matInput placeholder="password" autocomplete="off" [type]="hide ? 'password' : 'text'" formControlName="password" required>
         <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </mat-form-field>
-      <button mat-raised-button color="warn" type="submit">Register</button>
+      <button mat-raised-button color="warn" type="submit">{{messages.home.register}}</button>
     </form>
   </mat-card-content>
 </mat-card>

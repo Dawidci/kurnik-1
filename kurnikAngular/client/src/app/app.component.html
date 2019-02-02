@@ -4,63 +4,47 @@
   <mat-toolbar color="primary">
 
     <mat-toolbar-row>
-      <span>{{title}}</span>
+      <span>{{messages.home.HenHouse}}</span>
 
       <div>
         <a mat-button routerLink="/home">
           <mat-icon>how_to_reg</mat-icon>
-          <a class="link" >{{messages.home.Home}}</a>
+          <a class="link" >{{messages.home.home}}</a>
         </a>
 
         <a mat-button *ngIf="username" routerLink="/rockPaper">
           <mat-icon>how_to_reg</mat-icon>
-          <a class="link" >Rock Paper Scissors</a>
+          <a class="link" >{{messages.home.RPS}}</a>
         </a>
 
         <a mat-button  *ngIf="username" routerLink="/pong">
           <mat-icon>how_to_reg</mat-icon>
-          <a class="link" > Pong </a>
+          <a class="link" >{{messages.home.pong}}</a>
         </a>
 
         <a mat-button  *ngIf="username" routerLink="/snake">
           <mat-icon>how_to_reg</mat-icon>
-          <a class="link" > Snake </a>
+          <a class="link" > {{messages.home.Snake}}</a>
         </a>
 
         <a mat-button *ngIf="username" routerLink="/game-list">
           <mat-icon>how_to_reg</mat-icon>
-          <a class="link" >Games list</a>
+          <a class="link" >{{messages.home.gamelist}}</a>
         </a>
 
         <a mat-button *ngIf="!username" routerLink="/register">
           <mat-icon>add_circle</mat-icon>
-          <a class="link" >Register</a>
+          <a class="link" >{{messages.home.register}}</a>
         </a>
 
         <a mat-button  *ngIf="!username" routerLink="/login">
           <mat-icon>add_circle</mat-icon>
-          <a class="link" > Login </a>
-        </a>
-
-        <a mat-button *ngIf="!role">
-            <a> NieRola </a>
-          </a>
-
-        <a mat-button *ngIf="role">
-            <a> Rola </a>
-          </a>
-
-        <a mat-button *ngIf="role==='admin'">
-          <a> Admin </a>
-        </a>
-
-        <a mat-button *ngIf="role==='user'">
-          <a> User </a>
+          <a class="link" >{{messages.home.login}} </a>
         </a>
 
         <a mat-button  *ngIf="username" (click)="logout()">
           <mat-icon>near_me</mat-icon>
-          <a class="link" > Logout</a>
+          <a class="link" > {{messages.home.Logout}}</a>
         </a>
       </div>
     </mat-toolbar-row>
@@ -85,13 +69,12 @@
         </label>
       
           <input type="checkbox" id="language" (change)="toggleEditable($event)"> 
-       {{contentEditable}}
        
         
             </p>  
           </div>
         </div>
       </div>
-      <div class="label2"> Witaj świecie, jest: {{timer.currentDateTime | date:'MM.dd.yyyy HH:mm'}}!  </div>
+      <div class="label2"> {{messages.home.Helloworld}} {{timer.currentDateTime | date:'MM.dd.yyyy HH:mm'}}!  </div>
 </div>
 </body>

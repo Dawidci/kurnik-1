@@ -9,22 +9,9 @@ import com.kurnik.services.UserResultService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
-//nie potrzeba @CrossOrigin pod kazda metoda - wystarczy nad nazwa klasy
-//w encjach nie potrzeba dawac @Column - hibernate automatycznie tworzy nazwe - chyba ze uzyjesz jakiegos slowa kluczowego typu "table" "order" itp. to wtedy warto dac nazwe
-//no i nazywaj po angielsku encje w bazie jak cala aplikacje masz po angielsku
-//porozbijaj sobie controllery na funkcjonalnosci np. jak ja zrobilem - do rejestracji i logowania oddzielny kontroller, do gier inny itp.
-//nad repository tez nie trzeba @CrossOrigin
-// w app properties dodalem "spring.jpa.hibernate.ddl-auto=create-drop" -ogolnie warto tego uzywac jak zmieniasz kolumny w bazie/relacje w bazie, bo inaczej ci sie baza rozjezdza z tym coc masz w javie a co masz w bazie, ale uwaga to dropuje i stawia od nowa baze
-//do dat uzywaj LocalDate/LocalDateTime a nie stringow :b
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
@@ -68,5 +55,8 @@ public class CrudController {
     public List<UserResult> getUserResults() {
     	return userResultService.getUserResults();
     }
+
+    @DeleteMapping("/games{id}")
+    public void delete(@PathVariable int id){gameService.deleteById(id);}
 
 }

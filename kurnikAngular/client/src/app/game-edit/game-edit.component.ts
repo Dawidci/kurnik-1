@@ -5,6 +5,7 @@ import { GameService } from '../shared/game/game.service';
 import { GiphyService } from '../shared/giphy/giphy.service';
 import { NgForm } from '@angular/forms';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-game-edit',
@@ -15,14 +16,18 @@ export class GameEditComponent implements OnInit, OnDestroy {
   game: any = {};
   
   sub: Subscription;
+  languageSubscription: Subscription;
+  messages;
 
   constructor(private route: ActivatedRoute,
               private router: Router,
               private gameService: GameService,
-              private giphyService: GiphyService) {
+              private giphyService: GiphyService,
+              private languageService: LanguageService) {
   }
 
   ngOnInit() {
+    this.subscribeOnLanguageChange();
     this.sub = this.route.params.subscribe(params => {
       const id = params['id'];
       if (id) {
@@ -40,8 +45,18 @@ export class GameEditComponent implements OnInit, OnDestroy {
     });
   }
 
+  private subscribeOnLanguageChange() {
+    this.languageSubscription = this.languageService.langSrc$
+      .subscribe((language: any) => {
+        this.messages = language.messages;
+      });
+    this.messages = this.languageService.getCurrentLanguage().messages;
+  }
+
+
   ngOnDestroy() {
     this.sub.unsubscribe();
+    this.languageSubscription.unsubscribe();
   }
 
   gotoList() {

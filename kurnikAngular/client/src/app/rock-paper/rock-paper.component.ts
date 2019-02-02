@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-rock-paper',
@@ -12,6 +14,8 @@ export class RockPaperComponent {
     'paper',
     'scissors'
   ]
+  languageSubscription: Subscription;
+  messages;
   playerSelected = -1;
   loading= false;
   isResultShow = false;
@@ -22,6 +26,27 @@ export class RockPaperComponent {
   theResult = 0 
   enemySelected  = -1;
 
+  constructor(
+    private languageService: LanguageService) {
+  }
+
+  ngOnInit() {
+       this.subscribeOnLanguageChange();
+  }
+
+  private subscribeOnLanguageChange() {
+    this.languageSubscription = this.languageService.langSrc$
+      .subscribe((language: any) => {
+        this.messages = language.messages;
+      });
+    this.messages = this.languageService.getCurrentLanguage().messages;
+  }
+
+
+  ngOnDestroy(){
+    this.languageSubscription.unsubscribe();
+  }
+  
  pick( weapon: number): void {
    // return immediately when still loading. You don't want
    // the user to spam the button.

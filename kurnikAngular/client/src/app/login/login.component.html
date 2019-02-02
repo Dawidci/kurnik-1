@@ -3,16 +3,16 @@
   <mat-card-content>
     <form class="example-container" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)" >
       <mat-card-header>
-        <mat-card-title>Login</mat-card-title>
+        <mat-card-title>{{messages.home.login}}</mat-card-title>
       </mat-card-header>
       <mat-form-field>
-        <input matInput placeholder="username" formControlName="username" required>
+        <input matInput placeholder="username" autocomplete="off" formControlName="username" required>
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" formControlName="password" required>
+        <input matInput placeholder="Enter your password" autocomplete="off" [type]="hide ? 'password' : 'text'" formControlName="password" required>
         <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </mat-form-field>
-      <button mat-raised-button color="warn" type="submit">Login</button>
+      <button mat-raised-button color="warn" type="submit">{{messages.home.login}}</button>
     </form>
   </mat-card-content>
 </mat-card>

@@ -1,26 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {LoginForm, User} from "../entities";
 import {Router} from "@angular/router";
 import {RegisterService} from "../register.service";
 import {MessageService} from "../message.service";
+import { Subscription } from 'rxjs';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
 
   hide = true;
   loginForm: FormGroup;
 
+  languageSubscription: Subscription;
+  messages;
 
-  constructor(private messageService: MessageService, private router: Router, private registerService: RegisterService, private formBuilder: FormBuilder) {
+
+  constructor(
+    private messageService: MessageService, 
+    private router: Router, 
+    private registerService: RegisterService, 
+    private formBuilder: FormBuilder,
+    private languageService: LanguageService) {
   }
 
   ngOnInit() {
     this.loginForm = this.createFormGroup();
+    this.subscribeOnLanguageChange();
+  }
+
+  ngOnDestroy(){
+    this.languageSubscription.unsubscribe();
   }
 
 
@@ -46,6 +61,14 @@ export class LoginComponent implements OnInit {
       username: new FormControl(),
       password: new FormControl()
     });
+  }
+
+  private subscribeOnLanguageChange() {
+    this.languageSubscription = this.languageService.langSrc$
+      .subscribe((language: any) => {
+        this.messages = language.messages;
+      });
+    this.messages = this.languageService.getCurrentLanguage().messages;
   }
 }
 

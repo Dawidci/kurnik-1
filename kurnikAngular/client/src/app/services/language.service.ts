@@ -44,7 +44,7 @@ export class LanguageService {
     return fullNames;
   }
 
-  public setCurrentLanguageByShort(languageShort) {
+  public setCurrentLanguageByShort(languageShort: string) {
     const newLanguage = _.filter(LocalStorageService.getLanguages(), language => {
       return language.short === languageShort;
     });

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { BestScoreManager } from './storage';
 import { CONTROLS, COLORS, BOARD_SIZE, GAME_MODES } from './constants';
+import { Subscription } from 'rxjs';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-snake',
@@ -39,8 +41,30 @@ export class SnakeComponent {
     y: -1
   };
 
+
+  languageSubscription: Subscription;
+  messages;
+
+  ngOnInit() {
+       this.subscribeOnLanguageChange();
+  }
+
+  private subscribeOnLanguageChange() {
+    this.languageSubscription = this.languageService.langSrc$
+      .subscribe((language: any) => {
+        this.messages = language.messages;
+      });
+    this.messages = this.languageService.getCurrentLanguage().messages;
+  }
+
+
+  ngOnDestroy(){
+    this.languageSubscription.unsubscribe();
+  }
+
   constructor(
-    private bestScoreService: BestScoreManager
+    private bestScoreService: BestScoreManager,
+    private languageService: LanguageService
   ) {
     this.setBoard();
   }

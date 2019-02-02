@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
 
 
     ngOnInit() {
+      this.languageService.loadDefaultLanguage();
       this.getTimer();
       this.username = sessionStorage.getItem('username');
       this.role = sessionStorage.getItem('role');
@@ -66,11 +67,11 @@ export class AppComponent implements OnInit {
     toggleEditable(event) {
       if ( event.target.checked ) {
           this.contentEditable = true;
-          this.changeLanguage("PL");
+          this.changeLanguage('PL');
      }
      else{
       this.contentEditable = false;
-      this.changeLanguage("EN");
+      this.changeLanguage('EN');
      }
       
  }

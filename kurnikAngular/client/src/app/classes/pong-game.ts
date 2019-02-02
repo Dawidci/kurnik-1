@@ -7,10 +7,11 @@ export class PongGame {
     public ball: Ball;
     public playerPaddle: Paddle;
     public enemyPaddle: Paddle;
-
+   
     private height: number;
     private width: number;
     public over: boolean;
+ 
 
     constructor(height: number, width: number) {
         this.height = height;
